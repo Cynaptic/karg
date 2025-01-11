@@ -78,3 +78,5 @@ static inline void list_pop_back(list_node_t *head) {
     for (entry = list_first_entry(head, typeof(*entry), member);               \
          &entry->member != (head);                                             \
          entry = list_entry(entry->member.next, typeof(*entry), member))
+
+#define LIST_HEAD_INIT(name) { &(name), &(name) }
