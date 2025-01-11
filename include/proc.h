@@ -24,6 +24,7 @@ typedef struct proc {
     list_node_t tree_node;
 
     pid_t pid;
+    u32 priority;
     u32 flags;
 
     struct proc *parent;
